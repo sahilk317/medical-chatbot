@@ -13,7 +13,6 @@ class Store_Index:
     def __init__(self):
         load_dotenv()
         PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
-        os.environ['PINECONE_API_KEY'] = PINECONE_API_KEY
         self.pinecone_api_key = PINECONE_API_KEY
         self.helper = Helper()
         self.embeddings = self.helper.download_embeddings()
@@ -26,7 +25,7 @@ class Store_Index:
             self.documents = self.helper.load_pdf_files('./data')
             self.minimal_docs = self.helper.filter_to_minimal_docs(self.documents)
             self.splitted_text = self.helper.split_text(self.minimal_docs)
-            
+
             pc.create_index(
                 name=index_name,
                 dimension=384,
