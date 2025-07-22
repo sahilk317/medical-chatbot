@@ -7,4 +7,6 @@ langchain-core
 langchain-pinecone
 ipykernel 
 langchain-huggingface
+langchain-groq
+streamlit
 -e .
