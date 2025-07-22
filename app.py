@@ -9,7 +9,8 @@ from langchain.schema.runnable import RunnableMap
 
 # Load API key
 load_dotenv()
-os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
+# os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
+groq_api_key = os.getenv('GROQ_API_KEY')
 
 # Page config
 st.set_page_config(page_title="MediBot - Medical Chatbot", page_icon="💊", layout="centered")
@@ -31,7 +32,7 @@ else:
 retriever = docsearch.as_retriever(search_type='similarity', search_kwargs={'k': 3})
 
 # Load model
-model = ChatGroq(model='llama3-70b-8192')
+model = ChatGroq(model='llama3-70b-8192',api_key=groq_api_key)
 
 # Prompt template
 prompt = ChatPromptTemplate.from_messages([
