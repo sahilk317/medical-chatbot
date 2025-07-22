@@ -12,8 +12,7 @@ class Store_Index:
 
     def __init__(self):
         load_dotenv()
-        PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
-        self.pinecone_api_key = PINECONE_API_KEY
+        self.pinecone_api_key = os.getenv('PINECONE_API_KEY')
         self.helper = Helper()
         self.embeddings = self.helper.download_embeddings()
 
