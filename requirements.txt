@@ -1,0 +1,10 @@
+langchain
+sentence-transformers
+pypdf
+python-dotenv
+langchain-community
+langchain-core
+langchain-pinecone
+ipykernel 
+langchain-huggingface
+-e .

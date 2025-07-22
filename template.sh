@@ -9,6 +9,7 @@ touch setup.py
 touch app.py
 touch research/trails.ipynb 
 touch requirements.txt
+touch store_index.py
 
 
 echo 'Directory and Files Created Successfully'
