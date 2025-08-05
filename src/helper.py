@@ -40,10 +40,11 @@ class Helper:
         return splitted_text
     
     def download_embeddings(self):
-        model_name = 'all-MiniLM-L6-v2'
+        model_name = 'sentence-transformers/all-MiniLM-L6-v2'
         embeddings = HuggingFaceEmbeddings(
             model_name=model_name,
             model_kwargs={"device": "cpu"}
         )
+        print("Embedding model loaded successfully!")
 
         return embeddings
