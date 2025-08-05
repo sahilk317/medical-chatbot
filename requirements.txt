@@ -1,12 +1,39 @@
+# langchain
+# sentence-transformers
+# pypdf
+# python-dotenv
+# langchain-community
+# langchain-core
+# langchain-pinecone
+# ipykernel 
+# langchain-huggingface
+# langchain-groq
+# streamlit
+# -e .
+
+# For LangChain and Streamlit functionality
 langchain
-sentence-transformers
-pypdf
-python-dotenv
 langchain-community
 langchain-core
 langchain-pinecone
-ipykernel 
 langchain-huggingface
 langchain-groq
 streamlit
+
+# For document loading and environment variables
+pypdf
+python-dotenv
+
+# For embeddings and ML models
+sentence-transformers
+torch
+
+# CRITICAL: Pinning these versions to avoid the "meta tensor" error
+transformers==4.40.1
+accelerate==0.29.3
+
+# For notebook development (optional)
+ipykernel
+
+# To install your local package
 -e .
