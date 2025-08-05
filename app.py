@@ -68,6 +68,7 @@ def get_response_from_llm(query):
     )
 
     return rag_chain.invoke(query).content  # ✅ CHANGED: Extract raw string from AIMessage
+
 mark = False
 # If user types something
 if user_input:
